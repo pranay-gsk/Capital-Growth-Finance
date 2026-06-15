@@ -7,7 +7,7 @@ export default function EligibilityCalculator() {
   const [monthlyIncome, setMonthlyIncome] = useState(75000);
   const [monthlyExpenses, setMonthlyExpenses] = useState(25000);
   const [existingEmi, setExistingEmi] = useState(10000);
-  const [tenureYears, setTenureYears] = useState(15);
+  const [tenureYears, setTenureYears] = useState(5);
   const [interestRate, setInterestRate] = useState(9.5);
 
   const [eligibleLoan, setEligibleLoan] = useState(0);
@@ -106,12 +106,16 @@ export default function EligibilityCalculator() {
             <input
               type="range"
               min="1"
-              max="30"
+              max="7"
               step="1"
               value={tenureYears}
               onChange={(e) => setTenureYears(Number(e.target.value))}
               className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-accent-gold"
             />
+            <div className="flex justify-between text-[10px] text-slate-400 font-medium mt-1">
+              <span>1 Year</span>
+              <span>7 Years</span>
+            </div>
           </div>
         </div>
 

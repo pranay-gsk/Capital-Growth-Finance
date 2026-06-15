@@ -7,7 +7,7 @@ import FloatingActions from "@/components/FloatingActions";
 import ApplicationModal from "@/components/ApplicationModal";
 import EMICalculator from "@/components/EMICalculator";
 import EligibilityCalculator from "@/components/EligibilityCalculator";
-import { CheckCircle2, DollarSign, Briefcase, HomeIcon, Car, ChevronRight } from "lucide-react";
+import { CheckCircle2, Car, ThumbsUp, TrendingUp, ShieldCheck, ChevronRight } from "lucide-react";
 
 export default function Loans() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,32 +15,32 @@ export default function Loans() {
 
   const categories = [
     {
-      title: "Personal Loan",
-      limit: "Up to ₹20 Lakhs",
-      desc: "Instant cash assistance for urgent private commitments. No collateral required.",
-      features: ["Interest starting at 10.5% p.a.", "Tenure up to 60 Months", "2-hour approval for pre-approved profiles", "Processing fee 1.5% - 2%"],
-      icon: DollarSign,
-    },
-    {
-      title: "Business Loan",
-      limit: "Up to ₹2 Crores",
-      desc: "Capital reserves for machinery, expansion, inventory purchases, or retail setups.",
-      features: ["Collateral-free options available", "Flexible dynamic EMI options", "Tenure up to 7 Years", "Minimum business vintage: 2 years"],
-      icon: Briefcase,
-    },
-    {
-      title: "Home Loan",
-      limit: "Attractive Rates",
-      desc: "Get funds to buy ready flats, construct villas, or purchase residential plots.",
-      features: ["Interest starting at 8.5% p.a.", "Tenures up to 30 Years", "Balance transfer facilities", "Minimal legal paperwork support"],
-      icon: HomeIcon,
-    },
-    {
-      title: "Vehicle Loan",
-      limit: "Fast Approvals",
-      desc: "Financing for cars, two-wheelers, tractors, and corporate transport vectors.",
-      features: ["Up to 90% LTV of asset valuation", "Tied up with major dealers in AP", "Tenure: 1 to 7 Years", "Same-day delivery verification"],
+      title: "New Car Loan",
+      limit: "Up to 90% LTV",
+      desc: "Instant sanction and door-step payout coordination for buying a new car.",
+      features: ["Interest starting at 7.8% p.a.", "Tenures up to 7 Years (84 Months)", "Tied up with major dealers in AP", "Minimal processing fee"],
       icon: Car,
+    },
+    {
+      title: "Used Car Loan",
+      limit: "Up to 80% Value",
+      desc: "Fast processing for buying pre-owned vehicles. Simplified evaluator valuation checks.",
+      features: ["Interest starting at 9.5% p.a.", "Tenures up to 5 Years (60 Months)", "Valuation report within 2 hours", "Easy transfer of RC hypothecation"],
+      icon: ThumbsUp,
+    },
+    {
+      title: "Commercial Vehicle Loan",
+      limit: "Up to ₹1.5 Crores",
+      desc: "Custom fleet credit lines for logistics operations, buses, trucks, and loaders.",
+      features: ["No collateral options", "Tenures up to 5 Years", "Flexible seasonal EMI schedules", "Cumulative loan structures"],
+      icon: TrendingUp,
+    },
+    {
+      title: "Two-Wheeler Loan",
+      limit: "Quick Sanctions",
+      desc: "Acquire passenger bikes and scooters with quick sanctions and low down payments.",
+      features: ["Sanctions within 2 hours", "Tenures up to 3 Years (36 Months)", "Minimal income proof paperwork", "Transparent interest schedules"],
+      icon: ShieldCheck,
     },
   ];
 
@@ -54,10 +54,10 @@ export default function Loans() {
         <div className="max-w-7xl mx-auto px-4 relative z-10 space-y-3">
           <span className="text-accent-gold text-xs font-bold uppercase tracking-widest block">Lending Hub</span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Tailored Loan Products
+            Vehicle Loan Products
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-            Choose from a wide variety of unsecured personal credit or large-ticket commercial financing.
+            Choose from passenger car loans, commercial fleet financing, or two-wheeler credit lines.
           </p>
         </div>
       </section>
@@ -117,10 +117,10 @@ export default function Loans() {
               Interactive Tools
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-primary-navy">
-              Estimate Loan Outgoings & Limits
+              Estimate Auto Loan Outgoings & Limits
             </h2>
             <p className="text-slate-500 text-xs sm:text-sm">
-              Use our real-time calculators to simulate monthly budgets and loan amount eligibility.
+              Use our real-time calculators to simulate monthly payments and eligible vehicle loan capacity.
             </p>
           </div>
 

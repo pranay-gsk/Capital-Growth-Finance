@@ -11,44 +11,44 @@ const reviews = [
   {
     name: "Ramesh Krishna",
     location: "Vijayawada",
-    service: "Business Loan",
+    service: "New Car Loan",
     rating: 5,
-    text: "Capital Growth Finance helped secure a Business Loan of ₹50 Lakhs for my retail outlet expansion in Benz Circle. The process was completely digital, and their rates were better than what regular local banks offered. Excellent team!",
+    text: "Capital Growth Finance helped secure a New Car Loan for my family SUV at Benz Circle. The process was entirely coordinate-free with the dealership, and their rates were better than what regular local banks offered. Excellent team!",
   },
   {
     name: "Sowmya Reddy",
     location: "Guntur",
-    service: "Home Loan Advisory",
+    service: "Used Car Loan",
     rating: 5,
-    text: "We wanted a home loan with competitive rates. Their advisor guide Ramesh explained the process clearly and helped coordinate documentation quickly. Within 3 days, our home loan was sanctioned. Fully recommend them!",
+    text: "We wanted to purchase a pre-owned car with quick valuation checks. Their advisor guide Ramesh explained the process clearly and helped coordinate documentation quickly. Within 4 hours, our loan was sanctioned.",
   },
   {
     name: "Prasad Rao",
     location: "Visakhapatnam",
-    service: "Mutual Funds & SIP",
+    service: "Commercial Vehicle Finance",
     rating: 5,
-    text: "I have been using their wealth advisory services for the past 4 years. The SIP recommendations are solid and have delivered a stable 14% CAGR, keeping my retirement planning on track. Highly professional and knowledgeable.",
+    text: "I have been using their commercial fleet financing for my transport business expansion. Payouts to dealership are seamless, terms are highly transparent, and they do not charge hidden processing fees.",
   },
   {
     name: "Anitha Devi",
     location: "Vijayawada Rural",
-    service: "Personal Loan",
+    service: "Two-Wheeler Loan",
     rating: 4,
-    text: "Needed quick funds for a medical emergency. Capital Growth Finance processed a Personal Loan of ₹8 Lakhs within 24 hours. The documentation was minimal. Very thankful for their fast service.",
+    text: "Needed quick funds to buy a scooter for commuting. Capital Growth Finance processed a Two-Wheeler Loan within 2 hours with minimal down payment. Highly recommend their quick services.",
   },
   {
     name: "Venkatesh Babu",
     location: "Vijayawada",
-    service: "Vehicle Loan",
+    service: "Refinancing",
     rating: 5,
-    text: "Got quick vehicle financing for my logistics company's commercial fleet expansion. Extremely responsive staff, transparent processing fee schedules, and quick dealer payouts.",
+    text: "Got quick refinancing against my commercial fleet to boost cash flow. Extremely responsive staff, transparent processing fee schedules, and quick dealer payouts.",
   },
   {
     name: "Kiran Kumar",
     location: "Tenali",
-    service: "Tax & Financial Advisory",
+    service: "Auto Loan Advisory",
     rating: 5,
-    text: "Outstanding consultancy services for ITR filing and tax exemptions. Saved a significant amount under 80C and corporate restructuring. Excellent experience overall.",
+    text: "Outstanding consultancy services regarding Hypothecation clearances and RTO registration coordination. Saved significant time and effort with their support.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function Testimonials() {
             Customer Testimonials
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-            See how we help individuals and local businesses achieve financial independence.
+            See how we help individuals and local businesses fund their vehicle aspirations.
           </p>
         </div>
       </section>
@@ -129,10 +129,10 @@ export default function Testimonials() {
             <Sparkles className="w-6 h-6" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-primary-navy">
-            Become a part of our 5,000+ member family
+            Become a part of our 8,500+ vehicle owner family
           </h2>
           <p className="text-slate-500 text-xs sm:text-sm">
-            We are dedicated to building long-term relationships based on credibility, support, and verified value addition. Start today!
+            We are dedicated to building long-term relationships based on credibility, speed, and dealership support. Start today!
           </p>
           <div className="pt-2">
             <button

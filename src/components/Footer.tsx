@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DollarSign, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Car, Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group">
               <div className="bg-accent-gold p-2 rounded-lg text-primary-navy font-bold flex items-center justify-center">
-                <DollarSign className="w-5 h-5" />
+                <Car className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-extrabold text-lg tracking-tight leading-none group-hover:text-accent-gold transition-colors">
@@ -24,7 +24,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
-              Your trusted partner for personalized lending, investment growth, and security in Vijayawada, Andhra Pradesh. Empowering lives through reliable and transparent services.
+              Your trusted partner for affordable vehicle loans, commercial fleet financing, and hassle-free auto credit in Vijayawada, Andhra Pradesh. Empowering vehicle ownership through transparent terms.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a href="#" className="hover:text-accent-gold transition-colors p-2 bg-white/5 rounded-lg hover:bg-white/10" aria-label="Facebook">
@@ -55,66 +55,66 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-white font-bold text-base tracking-wide uppercase mb-4 border-b border-accent-gold/20 pb-2">
-              Loan Products
+              Vehicle Loan Products
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/loans" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Personal Loans (Up to ₹20 Lakhs)
+                  New Car Loans (High LTV)
                 </Link>
               </li>
               <li>
                 <Link href="/loans" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Business Loans (Up to ₹2 Crores)
+                  Used Car Loans (Quick Sanctions)
                 </Link>
               </li>
               <li>
                 <Link href="/loans" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Home Loans (Competitive Rates)
+                  Commercial Vehicle Financing
                 </Link>
               </li>
               <li>
                 <Link href="/loans" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Vehicle Loans (Instant Approval)
+                  Two-Wheeler Loans
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Mortgage Loans
+                  Refinancing & Loans Against Vehicle
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Investments & Advisory */}
+          {/* Highlights */}
           <div>
             <h3 className="text-white font-bold text-base tracking-wide uppercase mb-4 border-b border-accent-gold/20 pb-2">
-              Investments & Tax
+              Why Choose Us
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/services" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Mutual Funds & SIPs
+                <Link href="/about" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
+                  Up to 90% On-Road Funding
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Wealth Management
+                <Link href="/about" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
+                  Minimal Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Retirement Planning
+                <Link href="/loans" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
+                  Flexible EMI Tenures (1-7 Yrs)
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Insurance Advisory
+                <Link href="/about" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
+                  Tie-ups with Major Dealerships
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
-                  Tax Planning & Consultancy
+                <Link href="/contact" className="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">
+                  Quick Hypothecation Clearance
                 </Link>
               </li>
             </ul>

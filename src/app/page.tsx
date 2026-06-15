@@ -19,7 +19,8 @@ import {
   BookOpen,
   ArrowRight,
   Sparkles,
-  FileText
+  FileText,
+  Car
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -28,31 +29,31 @@ import ApplicationModal from "@/components/ApplicationModal";
 
 // Data
 const stats = [
-  { value: "5000+", label: "Happy Customers" },
-  { value: "₹100 Cr+", label: "Loans Processed" },
+  { value: "8500+", label: "Vehicles Funded" },
+  { value: "₹150 Cr+", label: "Loans Sanctioned" },
   { value: "10+", label: "Years Experience" },
-  { value: "98%", label: "Satisfaction Rate" },
+  { value: "99%", label: "Satisfaction Rate" },
 ];
 
 const mainServices = [
-  { title: "Personal Loans", desc: "Quick cash up to ₹20 Lakhs for personal milestones, travel, or medical emergencies.", icon: UserCheck },
-  { title: "Business Loans", desc: "Capital loans up to ₹2 Crores to scale operations, purchase inventory, or upgrade tech.", icon: TrendingUp },
-  { title: "Home Loans", desc: "Attractive interest rates with flexible tenures to build or buy your dream home.", icon: ShieldCheck },
-  { title: "Vehicle Loans", desc: "Get fast approvals and high LTV financing on your new car or commercial vehicle.", icon: Award },
+  { title: "New Car Loans", desc: "Get up to 90% on-road funding with attractive interest rates starting at 7.8% p.a.", icon: Car },
+  { title: "Used Car Loans", desc: "Fast approval and simplified valuation checks for pre-owned passenger vehicles.", icon: ThumbsUp },
+  { title: "Commercial Vehicles", desc: "Affordable fleet finance lines for buses, trucks, and multi-utility commercial setups.", icon: TrendingUp },
+  { title: "Two-Wheeler Loans", desc: "Quick cash loans and minimal paperwork for purchase of scooters and bikes.", icon: ShieldCheck },
 ];
 
 const faqs = [
-  { q: "How quickly can I get loan approval?", a: "For pre-approved customer profiles, approval happens within 2 hours. Normal processing takes 24 to 48 hours after submitting verified documentation." },
-  { q: "What documents are required?", a: "Standard requirements include: PAN card, Aadhaar card, past 6 months bank statements, and income proof (Salary slips & Form 16 for salaried; ITR & financial statements for self-employed)." },
-  { q: "Do you provide business loans?", a: "Yes, we provide unsecured and secured business loans up to ₹2 Crores for businesses operating in Vijayawada and across Andhra Pradesh." },
-  { q: "Can I apply online?", a: "Absolutely! You can apply directly through our online loan application form. Our advisors will then guide you digitally for subsequent steps." },
-  { q: "What are the interest rates?", a: "Our interest rates are highly competitive, starting from 8.5% p.a. for Home Loans and 10.5% p.a. for Personal & Business Loans depending on credit profiling." },
+  { q: "What is the maximum loan tenure for a vehicle loan?", a: "The maximum tenure is up to 7 years (84 months) for passenger vehicles and up to 5 years for commercial vehicles." },
+  { q: "What is the maximum financing available (LTV)?", a: "We provide up to 90% of the on-road price (ex-showroom + road tax + insurance) for brand new passenger cars based on credit profile." },
+  { q: "Do you offer loans for pre-owned/used cars?", a: "Yes! We offer used car loans up to 80% of the vehicle value determined by our certified evaluator partner." },
+  { q: "Can I prepay or pre-close my auto loan?", a: "Yes, you can pre-close or prepay your vehicle loan in accordance with our transparent guidelines. There are no hidden charges." },
+  { q: "How quickly is the loan sanctioned and paid out?", a: "Online approvals are processed within 2 hours. Once the final invoice and hypothecation details are agreed, disbursement to the dealership is done within 24 hours." },
 ];
 
 const blogs = [
-  { title: "Smart Ways to Manage Business Cash Flow", category: "Business Advice", date: "June 10, 2026", desc: "Learn essential strategies to optimize working capital and keep your cash flow healthy." },
-  { title: "A Beginner's Guide to SIP & Mutual Funds", category: "Wealth Planning", date: "May 28, 2026", desc: "Understand how regular small investments can grow into a massive wealth corpus over time." },
-  { title: "Understanding Home Loan Interest Rates", category: "Loan Guide", date: "May 15, 2026", desc: "Floating vs Fixed rates? Discover which home loan structure suits your financial budget." },
+  { title: "How to Secure the Lowest Interest Rates on Vehicle Loans", category: "Buying Advice", date: "June 12, 2026", desc: "Learn how your credit rating, vehicle model choice, and tenure affect your monthly auto EMIs." },
+  { title: "Buying a New vs. Used Car: A Complete Financing Comparison", category: "Loan Guide", date: "May 29, 2026", desc: "Examine LTV caps, interest rate variations, and depreciation factors when financing pre-owned vehicles." },
+  { title: "Fulfilling Logistics Dreams: Commercial Fleet Finance Strategies", category: "Fleet Growth", date: "May 18, 2026", desc: "Understand tax deductions, interest subsidies, and repayment structure choices for commercial fleets." },
 ];
 
 export default function Home() {
@@ -83,7 +84,7 @@ export default function Home() {
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-accent-gold text-xs font-semibold tracking-wide uppercase"
               >
                 <Sparkles className="w-3.5 h-3.5 text-accent-gold" />
-                <span>Premier Financial Solutions in Andhra Pradesh</span>
+                <span>Premier Vehicle Finance in Andhra Pradesh</span>
               </motion.div>
 
               <motion.h1
@@ -92,10 +93,10 @@ export default function Home() {
                 transition={{ delay: 0.1 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight"
               >
-                Your Trusted <br className="hidden sm:inline" />
+                Drive Your Dream <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-gold via-yellow-200 to-accent-gold">
-                  Financial Growth
-                </span> Partner
+                  Vehicle Today
+                </span>
               </motion.h1>
 
               <motion.p
@@ -104,7 +105,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium"
               >
-                Helping individuals and businesses achieve their financial goals through smart lending, wealth investments, insurance advisory, and strategic financial planning.
+                Helping individuals and business owners acquire passenger cars, commercial fleets, and two-wheelers through simple, high-LTV auto lending solutions.
               </motion.p>
 
               <motion.div
@@ -139,31 +140,31 @@ export default function Home() {
                 {/* Simulated Header */}
                 <div className="flex justify-between items-center border-b border-white/10 pb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold font-extrabold text-sm">C</div>
+                    <div className="w-8 h-8 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold font-extrabold text-sm"><Car className="w-4 h-4 text-accent-gold" /></div>
                     <div>
-                      <span className="block text-xs font-bold text-white uppercase">Growth Dashboard</span>
+                      <span className="block text-xs font-bold text-white uppercase">Finance Dashboard</span>
                       <span className="block text-[10px] text-slate-400">Vijayawada, AP</span>
                     </div>
                   </div>
-                  <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-bold">ACTIVE PORTFOLIO</span>
+                  <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-bold">ACTIVE DEALS</span>
                 </div>
 
                 {/* Main Metrics */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/5 rounded-xl p-3.5 border border-white/5">
-                    <span className="block text-[10px] text-slate-400 uppercase font-semibold">Total Wealth Growth</span>
-                    <span className="block text-lg font-bold text-accent-gold mt-1">+24.8%</span>
+                    <span className="block text-[10px] text-slate-400 uppercase font-semibold">Vehicles Funded</span>
+                    <span className="block text-lg font-bold text-accent-gold mt-1">8,500+</span>
                   </div>
                   <div className="bg-white/5 rounded-xl p-3.5 border border-white/5">
-                    <span className="block text-[10px] text-slate-400 uppercase font-semibold">Current Best APR</span>
-                    <span className="block text-lg font-bold text-white mt-1">8.5% p.a.</span>
+                    <span className="block text-[10px] text-slate-400 uppercase font-semibold">Interest Rates From</span>
+                    <span className="block text-lg font-bold text-white mt-1">7.8% p.a.</span>
                   </div>
                 </div>
 
                 {/* SVG Visual Graph representing Growth */}
                 <div className="bg-white/5 rounded-xl p-4 border border-white/5">
                   <div className="flex justify-between text-[10px] text-slate-400 mb-2">
-                    <span>Performance (10Y CAGR)</span>
+                    <span>Disbursement Trend (Lakhs)</span>
                     <span className="text-accent-gold font-bold">Capital Growth Finance</span>
                   </div>
                   <svg className="w-full h-32 overflow-visible" viewBox="0 0 100 35">
@@ -228,10 +229,10 @@ export default function Home() {
               Loan Services
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-primary-navy">
-              Premium Lending Solutions
+              Premium Vehicle Lending Solutions
             </h2>
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              We process competitive credit lines for personal and business goals with minimal documentation and transparent guidelines.
+              We process competitive credit lines for buying personal passenger cars, commercial transport fleets, and two-wheelers with minimal documentation.
             </p>
           </div>
 
@@ -268,23 +269,23 @@ export default function Home() {
           {/* Quick Loan features strip */}
           <div className="mt-16 bg-primary-navy rounded-2xl p-6 md:p-8 border border-accent-gold/25 flex flex-wrap justify-around gap-6 text-white text-center">
             <div className="space-y-1">
-              <span className="block text-accent-gold font-bold text-lg sm:text-xl">Quick Approval</span>
-              <span className="block text-[10px] text-slate-300 uppercase">Within 24 Hours</span>
+              <span className="block text-accent-gold font-bold text-lg sm:text-xl">Quick Sanctions</span>
+              <span className="block text-[10px] text-slate-300 uppercase">Within 4 Hours</span>
             </div>
             <div className="h-10 w-px bg-white/10 hidden md:block" />
             <div className="space-y-1">
-              <span className="block text-accent-gold font-bold text-lg sm:text-xl">Minimal Documents</span>
-              <span className="block text-[10px] text-slate-300 uppercase">Fully Digital Flow</span>
+              <span className="block text-accent-gold font-bold text-lg sm:text-xl">High LTV Limits</span>
+              <span className="block text-[10px] text-slate-300 uppercase">Up to 90% On-Road Funding</span>
             </div>
             <div className="h-10 w-px bg-white/10 hidden md:block" />
             <div className="space-y-1">
               <span className="block text-accent-gold font-bold text-lg sm:text-xl">Lowest Interest Rates</span>
-              <span className="block text-[10px] text-slate-300 uppercase">Starting at 8.5% p.a.</span>
+              <span className="block text-[10px] text-slate-300 uppercase">Starting at 7.8% p.a.</span>
             </div>
             <div className="h-10 w-px bg-white/10 hidden md:block" />
             <div className="space-y-1">
-              <span className="block text-accent-gold font-bold text-lg sm:text-xl">Flexible EMI Options</span>
-              <span className="block text-[10px] text-slate-300 uppercase">Up to 30 Years Tenure</span>
+              <span className="block text-accent-gold font-bold text-lg sm:text-xl">Flexible Tenures</span>
+              <span className="block text-[10px] text-slate-300 uppercase">Up to 7 Years (84 Months)</span>
             </div>
           </div>
         </div>
@@ -299,10 +300,10 @@ export default function Home() {
                 Why Capital Growth Finance
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-primary-navy leading-tight">
-                Empowering Financial Journeys With Trust & Excellence
+                Empowering Vehicle Ownership With Trust & Speed
               </h2>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                As a leading financial consulting firm in Vijayawada, Andhra Pradesh, we focus heavily on transparent charges, secure online processing, and structured wealth advice.
+                As a leading auto finance consultant firm in Vijayawada, Andhra Pradesh, we focus heavily on transparent hypothecation terms, secure online applications, and fast dealer payouts.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -311,7 +312,7 @@ export default function Home() {
                     <ThumbsUp className="w-3 h-3" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-primary-navy">Fast Loan Processing</h4>
+                    <h4 className="text-sm font-bold text-primary-navy">Fast Dealer Payouts</h4>
                     <p className="text-[11px] text-slate-500">Same-day sanctioning opportunities.</p>
                   </div>
                 </div>
@@ -330,7 +331,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-primary-navy">Expert Advisory Support</h4>
-                    <p className="text-[11px] text-slate-500">Dedicated credit officer assignments.</p>
+                    <p className="text-[11px] text-slate-500">Dedicated auto loan officer assignments.</p>
                   </div>
                 </div>
                 <div className="flex gap-3">
@@ -338,8 +339,8 @@ export default function Home() {
                     <ThumbsUp className="w-3 h-3" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-primary-navy">Secure Transaction Portal</h4>
-                    <p className="text-[11px] text-slate-500">Banking-grade 256-bit data protection.</p>
+                    <h4 className="text-sm font-bold text-primary-navy">Hypothecation Clearance</h4>
+                    <p className="text-[11px] text-slate-500">Smooth paperwork and dealer coordination.</p>
                   </div>
                 </div>
               </div>
@@ -351,15 +352,15 @@ export default function Home() {
                 <div className="absolute top-0 right-0 w-24 h-24 bg-accent-gold/10 rounded-full blur-xl" />
                 <h3 className="text-primary-navy font-extrabold text-xl mb-4">Empowering Andhra Pradesh</h3>
                 <p className="text-xs text-slate-600 leading-relaxed mb-6">
-                  Capital Growth Finance operates locally in Vijayawada, catering to regions such as Guntur, Visakhapatnam, and Vijayawada rural. We offer simplified access to capital lines, wealth portfolios, and insurance safety nets.
+                  Capital Growth Finance operates locally in Vijayawada, catering to regions such as Guntur, Visakhapatnam, and Vijayawada rural. We offer simplified access to auto lending, commercial fleets, and refinancing options.
                 </p>
 
                 <div className="space-y-4">
                   <div className="bg-white rounded-xl p-4 border border-slate-150 flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-accent-gold/25 text-primary-navy flex items-center justify-center font-bold">98%</div>
+                    <div className="w-10 h-10 rounded-lg bg-accent-gold/25 text-primary-navy flex items-center justify-center font-bold">99%</div>
                     <div>
                       <h4 className="text-xs font-bold text-primary-navy">Customer Satisfaction</h4>
-                      <p className="text-[10px] text-slate-400">Feedback from over 5,000 regional customers.</p>
+                      <p className="text-[10px] text-slate-400">Feedback from over 8,500 regional customers.</p>
                     </div>
                   </div>
                   <div className="bg-white rounded-xl p-4 border border-slate-150 flex items-center gap-4">
@@ -376,79 +377,86 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Investment & Wealth Segment */}
+      {/* Vehicle Financing Steps Segment */}
       <section className="py-20 bg-slate-50 border-t border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Wealth Visual */}
+            {/* Steps Visual */}
             <div className="lg:col-span-5 order-last lg:order-first">
               <div className="bg-white rounded-3xl p-6 border border-slate-150 shadow-lg space-y-4">
                 <div className="flex justify-between items-center text-xs font-bold text-primary-navy uppercase tracking-wider pb-2 border-b border-slate-100">
-                  <span>Investment Options</span>
-                  <span className="text-accent-gold">Monthly SIP Calculator</span>
+                  <span>How It Works</span>
+                  <span className="text-accent-gold">4-Step Sanction Process</span>
                 </div>
-                <div className="space-y-3.5">
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-500">Mutual Funds</span>
-                    <span className="font-bold text-slate-700">12% - 15% Expected Returns</span>
+                <div className="space-y-4">
+                  <div className="flex gap-3 items-start">
+                    <span className="w-6 h-6 rounded-full bg-accent-gold/25 text-primary-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">1</span>
+                    <div>
+                      <h4 className="text-xs font-bold text-primary-navy">Select Your Vehicle</h4>
+                      <p className="text-[10px] text-slate-400">Choose any new car, pre-owned car or commercial vehicle from your preferred dealer.</p>
+                    </div>
                   </div>
-                  <div className="h-1.5 w-full bg-slate-150 rounded-full overflow-hidden">
-                    <div className="w-4/5 h-full bg-accent-gold rounded-full" />
+                  <div className="flex gap-3 items-start">
+                    <span className="w-6 h-6 rounded-full bg-accent-gold/25 text-primary-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">2</span>
+                    <div>
+                      <h4 className="text-xs font-bold text-primary-navy">Calculate EMI & Apply</h4>
+                      <p className="text-[10px] text-slate-400">Estimate your payments using our calculator and submit a quick client-side form.</p>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-500">Fixed Income Solutions</span>
-                    <span className="font-bold text-slate-700">7.5% - 8.5% Assured</span>
+                  <div className="flex gap-3 items-start">
+                    <span className="w-6 h-6 rounded-full bg-accent-gold/25 text-primary-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">3</span>
+                    <div>
+                      <h4 className="text-xs font-bold text-primary-navy">Verify & Sanction</h4>
+                      <p className="text-[10px] text-slate-400">Our advisor validates your income statements and issues loan approval within 2-4 hours.</p>
+                    </div>
                   </div>
-                  <div className="h-1.5 w-full bg-slate-150 rounded-full overflow-hidden">
-                    <div className="w-3/5 h-full bg-primary-navy rounded-full" />
-                  </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-slate-500">Portfolio Management Services (PMS)</span>
-                    <span className="font-bold text-slate-700">Custom Alpha portfolios</span>
-                  </div>
-                  <div className="h-1.5 w-full bg-slate-150 rounded-full overflow-hidden">
-                    <div className="w-11/12 h-full bg-blue-600 rounded-full" />
+                  <div className="flex gap-3 items-start">
+                    <span className="w-6 h-6 rounded-full bg-accent-gold/25 text-primary-navy flex items-center justify-center font-extrabold text-xs shrink-0 mt-0.5">4</span>
+                    <div>
+                      <h4 className="text-xs font-bold text-primary-navy">Disbursal & Delivery</h4>
+                      <p className="text-[10px] text-slate-400">We pay the dealership directly, transfer hypothecation, and you drive away.</p>
+                    </div>
                   </div>
                 </div>
                 <div className="pt-2 text-center">
                   <Link
-                    href="/services"
+                    href="/loans"
                     className="inline-block text-xs font-bold text-primary-navy hover:text-accent-gold"
                   >
-                    Calculate SIP Growth Goals →
+                    Check Loan EMI Instantly →
                   </Link>
                 </div>
               </div>
             </div>
 
-            {/* Wealth Text */}
+            {/* Steps Text */}
             <div className="lg:col-span-7 space-y-6">
               <span className="inline-block px-3 py-1 rounded-full bg-accent-gold/10 text-primary-navy text-xs font-bold uppercase tracking-wider">
-                Investment Services
+                Seamless Financing Flow
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-primary-navy leading-tight">
-                Secure Wealth Creation & Retirement Planning
+                Zero Stress Auto Financing Process
               </h2>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Invest smartly to counter inflation. Capital Growth Finance guides you to top-performing Mutual Funds, Systematic Investment Plans (SIPs), Portfolio Management, and tax-saver instruments.
+                Why get stuck in tedious banking lines? Capital Growth Finance coordinates directly with vehicle dealerships in Vijayawada and Guntur to expedite your delivery.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white rounded-xl p-4 border border-slate-100">
-                  <h4 className="font-bold text-sm text-primary-navy">Mutual Funds</h4>
-                  <p className="text-[11px] text-slate-500 mt-1">Growth oriented equity schemes.</p>
+                  <h4 className="font-bold text-sm text-primary-navy">Dealer Network</h4>
+                  <p className="text-[11px] text-slate-500 mt-1">Direct tie-ups with premium car showrooms in AP.</p>
                 </div>
                 <div className="bg-white rounded-xl p-4 border border-slate-100">
-                  <h4 className="font-bold text-sm text-primary-navy">SIP Planning</h4>
-                  <p className="text-[11px] text-slate-500 mt-1">Disciplined monthly wealth creation.</p>
+                  <h4 className="font-bold text-sm text-primary-navy">RC Hypothecation</h4>
+                  <p className="text-[11px] text-slate-500 mt-1">Hassle-free registration and RTO paperwork support.</p>
                 </div>
-                <div className="bg-white rounded-xl p-4 border border-slate-100">
-                  <h4 className="font-bold text-sm text-primary-navy">Retirement Planning</h4>
-                  <p className="text-[11px] text-slate-500 mt-1">Stable pension corpus development.</p>
+                <div className="bg-white rounded-xl p-4 border border-slate-150">
+                  <h4 className="font-bold text-sm text-primary-navy">Refinancing Options</h4>
+                  <p className="text-[11px] text-slate-500 mt-1">Get up to 70% cash loans against your existing vehicles.</p>
                 </div>
-                <div className="bg-white rounded-xl p-4 border border-slate-100">
-                  <h4 className="font-bold text-sm text-primary-navy">Fixed Income</h4>
-                  <p className="text-[11px] text-slate-500 mt-1">Low-risk debt and deposit securities.</p>
+                <div className="bg-white rounded-xl p-4 border border-slate-150">
+                  <h4 className="font-bold text-sm text-primary-navy">Commercial Fleets</h4>
+                  <p className="text-[11px] text-slate-500 mt-1">Flexible structures for transport startups & fleets.</p>
                 </div>
               </div>
             </div>
@@ -554,10 +562,10 @@ export default function Home() {
       <section className="bg-primary-navy py-16 text-white text-center relative overflow-hidden border-t border-accent-gold/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-            Ready to Accelerate Your Wealth?
+            Ready to Drive Your New Vehicle?
           </h2>
           <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-            Get personalized assistance from our senior financial planning desk based in Benz Circle, Vijayawada. Connect today!
+            Get personalized assistance from our senior vehicle lending desk based in Benz Circle, Vijayawada. Connect today!
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <button

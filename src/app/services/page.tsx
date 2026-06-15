@@ -6,65 +6,50 @@ import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import ApplicationModal from "@/components/ApplicationModal";
 import {
-  UserCheck,
-  TrendingUp,
-  Home,
   Car,
-  FileText,
-  PieChart,
+  ThumbsUp,
+  TrendingUp,
   ShieldCheck,
   Percent,
-  CheckCircle,
-  HelpCircle
+  FileText,
+  CheckCircle
 } from "lucide-react";
 
 const allServices = [
   {
-    title: "Personal Loans",
-    desc: "Unsecured lines of credit up to ₹20 Lakhs. Ideal for weddings, medical emergencies, education, or travel.",
-    features: ["Interest rates from 10.5%", "Tenure: 1 to 5 Years", "Approval in 24 Hours", "Zero collateral required"],
-    icon: UserCheck
-  },
-  {
-    title: "Business Loans",
-    desc: "Working capital, machinery loans, and structural debt lines up to ₹2 Crores to expand industrial operations.",
-    features: ["Secured & Unsecured options", "Tenure: 1 to 7 Years", "Flexible repayment terms", "Minimal business vintage required"],
-    icon: TrendingUp
-  },
-  {
-    title: "Home Loans",
-    desc: "Housing finance for building, acquiring, or renovating residential units in Vijayawada.",
-    features: ["Interest rates from 8.5%", "Tenure: Up to 30 Years", "Top-up loan availability", "Simple legal verification support"],
-    icon: Home
-  },
-  {
-    title: "Vehicle Loans",
-    desc: "Low-interest loans for buying personal cars, commercial fleets, or heavy-duty logistics vehicles.",
-    features: ["Up to 90% on-road financing", "Instant online eligibility check", "Tenure: Up to 7 Years", "Hassle-free dealer tie-ups"],
+    title: "New Car Loans",
+    desc: "Financing solutions for brand new passenger cars. Get competitive rates and high loan-to-value allocations.",
+    features: ["Interest rates from 7.8% p.a.", "Tenure: Up to 7 Years", "Funding up to 90% on-road price", "Quick sanction and low processing fees"],
     icon: Car
   },
   {
-    title: "Mortgage Loans",
-    desc: "Unlock the value of your commercial or residential property with Loan Against Property (LAP).",
-    features: ["High ticket amounts", "Lower interest rates than personal loans", "Flexible end-use criteria", "Tenure: Up to 15 Years"],
-    icon: Percent
+    title: "Used Car Loans",
+    desc: "Pre-owned passenger car loans featuring rapid vehicle valuation checks and simplified legal clearance.",
+    features: ["Interest rates from 9.5% p.a.", "Tenure: Up to 5 Years", "Funding up to 80% valuation", "Fast dealer payout structures"],
+    icon: ThumbsUp
   },
   {
-    title: "Investment Planning",
-    desc: "Expert portfolio building with Mutual Funds, Systematic Investment Plans (SIPs), and fixed-income assets.",
-    features: ["Risk profile mapping", "1-on-1 counselor meetings", "High inflation-beating yields", "Periodic portfolio balancing"],
-    icon: PieChart
+    title: "Commercial Fleet Financing",
+    desc: "Acquire buses, trucks, and light commercial vehicles to expand your company logistics and distribution capacity.",
+    features: ["Custom fleet repayment charts", "Tenure: Up to 5 Years", "Funding up to 85% chassis cost", "No collateral required option"],
+    icon: TrendingUp
   },
   {
-    title: "Insurance Advisory",
-    desc: "Life insurance, term coverage, and comprehensive corporate health plans to protect your family and staff.",
-    features: ["Top general insurance tie-ups", "Cashless claims network check", "Tax exemption certificates", "Tailored premium options"],
+    title: "Two-Wheeler Loans",
+    desc: "Sanctions within hours for scooters, utility motorbikes, and premium sports bikes.",
+    features: ["Superfast digital sanction", "Tenure: Up to 3 Years", "Low down-payment requirements", "Minimal income proof required"],
     icon: ShieldCheck
   },
   {
-    title: "Tax Planning",
-    desc: "Legitimate tax saving planning, file submissions, and commercial advisory under IT Act regulations.",
-    features: ["Section 80C & 80D optimizations", "ITR filing guidance", "Corporate tax consulting", "Audit representation assistance"],
+    title: "Loan Against Vehicle",
+    desc: "Unlock immediate working capital or personal cash reserves by pledging your existing vehicle's equity.",
+    features: ["Get up to 70% vehicle market value", "No vehicle age restrictions (up to 7 yrs)", "Refinance with minimal legal steps", "Maintain ownership & keep driving"],
+    icon: Percent
+  },
+  {
+    title: "RTO & NOC Coordination",
+    desc: "End-to-end liaison support for hypothecation additions, registration transfers, and bank NOC clearances.",
+    features: ["Direct liaison with regional RTO desks", "Quick Hypothecation removal assistance", "Transparent service fee structures", "Support for AP registration codes"],
     icon: FileText
   }
 ];
@@ -86,12 +71,12 @@ export default function Services() {
       <section className="bg-primary-navy py-16 text-center text-white border-b border-accent-gold/20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-navy via-secondary-blue to-primary-navy opacity-90" />
         <div className="max-w-7xl mx-auto px-4 relative z-10 space-y-3">
-          <span className="text-accent-gold text-xs font-bold uppercase tracking-widest block">Financial Catalog</span>
+          <span className="text-accent-gold text-xs font-bold uppercase tracking-widest block">Service Catalog</span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Comprehensive Financial Services
+            Comprehensive Vehicle Financing
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-            From quick retail loans to strategic wealth management and corporate tax filing assistance.
+            From retail passenger car loans to heavy-duty fleet loans and refinance solutions.
           </p>
         </div>
       </section>
@@ -140,9 +125,9 @@ export default function Services() {
       {/* Quick Consultation Section */}
       <section className="py-16 bg-white text-center border-t border-slate-100">
         <div className="max-w-3xl mx-auto px-4 space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-primary-navy">Not sure which service fits your profile?</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-primary-navy">Not sure which financing service fits you?</h2>
           <p className="text-slate-500 text-xs sm:text-sm">
-            Meet our certified financial advisory team based in Vijayawada. We examine your balance sheets, credit history, and liabilities to propose the most affordable solutions.
+            Meet our certified auto loan advisory team based in Vijayawada. We coordinate directly with local dealers to propose the most affordable EMI structures.
           </p>
           <div className="pt-2">
             <button

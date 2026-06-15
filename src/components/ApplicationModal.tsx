@@ -14,7 +14,7 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
     name: "",
     phone: "",
     email: "",
-    service: "Personal Loans",
+    service: "New Car Loans",
     amount: "",
     message: "",
   });
@@ -32,25 +32,11 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
     setIsSubmitting(true);
     setErrorMsg(null);
     
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(data.error || "Something went wrong.");
-      }
-
+    // Simulate successful submission for static website profile
+    setTimeout(() => {
       setIsSubmitted(true);
-    } catch (err: any) {
-      console.error(err);
-      setErrorMsg(err.message || "Failed to submit. Please try again.");
-    } finally {
       setIsSubmitting(false);
-    }
+    }, 1000);
   };
 
   const handleReset = () => {
@@ -58,7 +44,7 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
       name: "",
       phone: "",
       email: "",
-      service: "Personal Loans",
+      service: "New Car Loans",
       amount: "",
       message: "",
     });
@@ -186,14 +172,11 @@ export default function ApplicationModal({ isOpen, onClose }: ApplicationModalPr
                         onChange={handleChange}
                         className="w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-gold/40 focus:border-accent-gold text-sm text-slate-800 bg-white"
                       >
-                        <option>Personal Loans</option>
-                        <option>Business Loans</option>
-                        <option>Home Loans</option>
-                        <option>Vehicle Loans</option>
-                        <option>Mortgage Loans</option>
-                        <option>Investment Planning</option>
-                        <option>Insurance Advisory</option>
-                        <option>Tax Planning</option>
+                        <option>New Car Loans</option>
+                        <option>Used Car Loans</option>
+                        <option>Commercial Vehicle Loans</option>
+                        <option>Two-Wheeler Loans</option>
+                        <option>Loan Against Vehicle</option>
                       </select>
                     </div>
                     <div>

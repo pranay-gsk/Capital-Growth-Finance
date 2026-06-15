@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, DollarSign, ChevronRight } from "lucide-react";
+import { Menu, X, Phone, Car, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface NavbarProps {
@@ -50,7 +50,7 @@ export default function Navbar({ onOpenApplyModal }: NavbarProps) {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <div className="bg-accent-gold p-2 rounded-lg text-primary-navy font-bold flex items-center justify-center shadow-md shadow-accent-gold/20">
-                <DollarSign className="w-5 h-5" />
+                <Car className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-extrabold text-lg sm:text-xl tracking-tight leading-none group-hover:text-accent-gold transition-colors">

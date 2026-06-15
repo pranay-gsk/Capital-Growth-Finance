@@ -21,10 +21,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 relative z-10 space-y-3">
           <span className="text-accent-gold text-xs font-bold uppercase tracking-widest block">About Us</span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-            Empowering Financial Success
+            Empowering Vehicle Ownership
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-            Discover our history, mission, and how we serve retail and commercial clients across Andhra Pradesh.
+            Discover our history, mission, and how we serve car buyers and fleet operators across Andhra Pradesh.
           </p>
         </div>
       </section>
@@ -38,19 +38,19 @@ export default function About() {
                 Who We Are
               </h2>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Capital Growth Finance is a premier financial consulting and lending partner headquartered in Benz Circle, Vijayawada. We help individuals, families, and growing businesses access institutional-grade financial products in a simple, hassle-free manner.
+                Capital Growth Finance is a premier vehicle finance consulting and lending partner headquartered in Benz Circle, Vijayawada. We help individuals, families, and commercial transport businesses secure funding for new passenger cars, pre-owned cars, logistics fleets, and two-wheelers in a simple, hassle-free manner.
               </p>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Whether you need immediate credit via Personal Loans, high-ticket Business capital, housing finance, or wealth advice (Mutual Funds, SIPs, and Insurance policies), our qualified financial counselors help secure the best market deals.
+                We coordinate directly with local vehicle dealerships to secure competitive interest rates, simplify hypothecation paperwork, and facilitate high LTV (Loan to Value) approvals.
               </p>
               <div className="space-y-3 pt-2">
                 <div className="flex items-center gap-2 text-sm text-slate-700 font-semibold">
                   <CheckCircle className="w-4.5 h-4.5 text-accent-gold" />
-                  <span>Customer-First Advisory Process</span>
+                  <span>Customer-First Auto Loan Advisory</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-slate-700 font-semibold">
                   <CheckCircle className="w-4.5 h-4.5 text-accent-gold" />
-                  <span>Over ₹100 Crores in cumulative disbursements</span>
+                  <span>Over ₹150 Crores in cumulative vehicle disbursements</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-slate-700 font-semibold">
                   <CheckCircle className="w-4.5 h-4.5 text-accent-gold" />
@@ -96,7 +96,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold text-primary-navy">Our Mission</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  To make banking-grade financial solutions, quick loans, and wealth-growth advisory simple, transparent, and digitally accessible to every household and enterprise in Andhra Pradesh.
+                  To make transparent auto loans, dealer-network financing, and commercial vehicle credit simple, affordable, and digitally accessible to every buyer in Andhra Pradesh.
                 </p>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold text-primary-navy">Our Vision</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  To become the most reliable and digitally advanced financial growth partner in Andhra Pradesh, fostering retail empowerment and SME acceleration through personalized financial engineering.
+                  To become the most reliable and digitally advanced auto finance growth partner in Andhra Pradesh, fostering passenger vehicle ownership and transport logistics fleet acceleration through personalized lending solutions.
                 </p>
               </div>
             </div>

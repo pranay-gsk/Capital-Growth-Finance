@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Info } from "lucide-react";
 
 export default function EMICalculator() {
-  const [loanAmount, setLoanAmount] = useState(1000000); // 10 Lakhs default
-  const [interestRate, setInterestRate] = useState(8.5); // 8.5% default
-  const [tenureYears, setTenureYears] = useState(15); // 15 Years default
+  const [loanAmount, setLoanAmount] = useState(800000); // 8 Lakhs default
+  const [interestRate, setInterestRate] = useState(9.5); // 9.5% default
+  const [tenureYears, setTenureYears] = useState(5); // 5 Years default
 
   const [emi, setEmi] = useState(0);
   const [totalInterest, setTotalInterest] = useState(0);
@@ -66,15 +66,15 @@ export default function EMICalculator() {
             <input
               type="range"
               min="100000"
-              max="20000000"
-              step="50000"
+              max="15000000"
+              step="25000"
               value={loanAmount}
               onChange={(e) => setLoanAmount(Number(e.target.value))}
               className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-accent-gold"
             />
             <div className="flex justify-between text-[10px] text-slate-400 font-medium">
               <span>₹1 Lakh</span>
-              <span>₹2 Crores</span>
+              <span>₹1.5 Crores</span>
             </div>
           </div>
 
@@ -88,16 +88,16 @@ export default function EMICalculator() {
             </div>
             <input
               type="range"
-              min="5"
-              max="20"
+              min="6"
+              max="18"
               step="0.1"
               value={interestRate}
               onChange={(e) => setInterestRate(Number(e.target.value))}
               className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-accent-gold"
             />
             <div className="flex justify-between text-[10px] text-slate-400 font-medium">
-              <span>5%</span>
-              <span>20%</span>
+              <span>6%</span>
+              <span>18%</span>
             </div>
           </div>
 
@@ -112,7 +112,7 @@ export default function EMICalculator() {
             <input
               type="range"
               min="1"
-              max="30"
+              max="7"
               step="1"
               value={tenureYears}
               onChange={(e) => setTenureYears(Number(e.target.value))}
@@ -120,7 +120,7 @@ export default function EMICalculator() {
             />
             <div className="flex justify-between text-[10px] text-slate-400 font-medium">
               <span>1 Year</span>
-              <span>30 Years</span>
+              <span>7 Years</span>
             </div>
           </div>
         </div>
