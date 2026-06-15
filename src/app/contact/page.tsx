@@ -41,11 +41,27 @@ export default function Contact() {
     setIsSubmitting(true);
     setErrorMsg(null);
 
-    // Simulate successful form submission client-side for static site
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message. Please try again.");
+      }
+
       setIsSubmitted(true);
+    } catch (err: any) {
+      setErrorMsg(err.message || "An unexpected error occurred. Please try again.");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleWhatsApp = () => {
